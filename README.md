@@ -46,7 +46,7 @@ buttonEl.addEventListener('click', addGoal);
 <br>
 
 <details>
-<summary>Vue 사용해보기</summary>
+<summary>2. Vue 사용해보기</summary>
 
 Vue를 사용하기 위한 여러가지 방법이 있지만 간단하게 CDN 방식으로 학습해보겠습니다.
 
