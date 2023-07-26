@@ -41,8 +41,84 @@ function addGoal() {
 // 두번째 파라미터는 클릭이 발생할 때 실행할 함수 지정
 buttonEl.addEventListener('click', addGoal);
 ```
-
-
 </details>
 
 <br>
+
+<details>
+<summary>Vue 사용해보기</summary>
+
+Vue를 사용하기 위한 여러가지 방법이 있지만 간단하게 CDN 방식으로 학습해보겠습니다.
+
+Vue를 간단하게 script 태그로 불러오는 코드입니다.
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+
+HTML 파일에 script 태그를 이용해 vue를 불러올 수 있습니다.
+Vue를 추가할때 js파일을 불러오는 script 위에 붙여줍시다.
+
+```html
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+```
+
+<br>
+
+Vue를 사용하기 전은 명령형 방식으로 실행했었습니다.
+
+이는 브라우저가 실행하는 단계를 직접 모두 정의해 준다는 뜻입니다. (버튼, 입력요소, 함수생성 등)
+
+<br>
+
+이때 Vue를 활용하면 완전히 다른 방식의 접근이 가능합니다.
+
+어느 시점에 DOM에서 무엇을 생성하고 추가하거나 바꿀지 Vue가 스스로 알아내도록 합니다.
+
+이를 위해서 HTML코드를 제어하는 Vue 앱을 생성해야 합니다.
+
+<br>
+
+Vue CDN을 불러와서 사용가능한 글로벌 객체인 `Vue.createApp()`을 호출하면 됩니다.
+
+이제 여기에 Vue앱을 구성하는 자바스크립트 객체를 넣어줍니다.
+
+이때 `구성`이란 Vue 앱에서 어떤 데이터를 사용할 지 설정하는걸 의미합니다.
+
+<br>
+
+```javascript
+Vue.createApp({
+  data() {
+    return {
+      goals: [],
+      enteredValue: ''
+    };
+  }
+});
+```
+
+<br>
+
+위 예제에서는 `Goal`과 사용자가 입력한 데이터가 필요한 데이터가 됩니다.
+
+그 데이터를 `data`라는 이름의 함수를 가지는 프로퍼티를 Vue 앱의 자바스크립트 객체에 추가해줍니다.
+
+이 함수는 객체를 반환해야 합니다.
+
+즉, Vue 앱이 인식해야 하는 데이터를 이 객체에서 정의합니다.
+
+<br>
+
+함수가 리턴하는 enteredValue를 HTML의 input과 특수한 지시문을 이용해 연결할 수 있습니다.
+
+바로 `v-model`이라는 속성인데 HTML이 지원하는 Default 속성은 아닙니다. Vue만 인식할 수 있습니다.
+
+`v-model`의 값으로는 프로퍼티 이름인 enteredValue를 넣어줍니다.
+
+```html
+<input type="text" id="goal" v-model="enteredValue">
+```
+
+</details>
