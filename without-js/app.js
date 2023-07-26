@@ -39,4 +39,4 @@ Vue.createApp({
       this.enteredValue = '';
     }
   }
-}).mount('#app');
+}).mount('#app'); 
