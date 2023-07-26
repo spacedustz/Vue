@@ -41,12 +41,13 @@ mount() 안에는 문자열이 들어가며 CSS 선택자를 넣으면 해당 HT
 
 ```javascript
 const app = Vue.createApp({
-	data: function() {
-		return {
-			courseGoal: 'Finish the course and learn Vue!'
-		};
+  data: function() {
+    return {
+      courseGoal: 'Finish the course and learn Vue!'
+      };
 	}
 });
+
 app.mount('#user-goal');
 ```
 
