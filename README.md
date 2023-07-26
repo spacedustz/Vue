@@ -209,6 +209,6 @@ CSS 선택자가 있는 문자열을 전달해서 DOM의 요소`#app`를 선택�
 
 결과물은 이렇게 됩니다.
 
-![img](https://raw.githubusercontent.com/spacdustz/Obsidian-Image-Server/main/img/vue.png)
+![img](https://raw.githubusercontent.com/spacedustz/Obsidian-Image-Server/main/img/vue.png)
 
 </details>
