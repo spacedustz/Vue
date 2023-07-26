@@ -50,6 +50,8 @@ buttonEl.addEventListener('click', addGoal);
 
 Vue를 사용하기 위한 여러가지 방법이 있지만 간단하게 CDN 방식으로 학습해보겠습니다.
 
+전에 썼던 app.js의 내용은 모두 주석처리 해줍니다.
+
 Vue를 간단하게 script 태그로 불러오는 코드입니다.
 
 ```html
@@ -115,10 +117,98 @@ Vue.createApp({
 
 바로 `v-model`이라는 속성인데 HTML이 지원하는 Default 속성은 아닙니다. Vue만 인식할 수 있습니다.
 
-`v-model`의 값으로는 프로퍼티 이름인 enteredValue를 넣어줍니다.
+`v-model`의 값으로는 프로퍼티 이름인 enteredValue를 반복합니다.
+
+즉, 사용자가 입력한 input 값을 수신해서 enteredValue 프로퍼티를 업데이트 합니다.
 
 ```html
 <input type="text" id="goal" v-model="enteredValue">
 ```
+
+<br>
+
+이제 버튼에서 enteredValue에 저장된 값을 가지고 createApp으로 전달하는 이 객체에 키:값 쌍을 하나 더 추가하면 됩니다.
+
+```javascript
+Vue.createApp({
+  data() {
+    return {
+      goals: [],
+      enteredValue: ''
+    };
+  },
+
+  // 이 부분
+  methods: {
+    addGoal() {
+      this.goals.push(this.enteredValue);
+    }
+  }
+});
+```
+
+위 코드에서 `methods` 부분에서 메서드와 함수를 정의할 수 있습니다.
+
+해당 메서드와 함수를 HTML코드에서 호출할 수 있어야겠죠.
+
+`addGoal()` 이라는 메서드를 추가하고 goals로 가서 현재 enteredValue에 추가합니다.
+
+<br>
+
+이제 버튼을 클릭할때마다 addGoal()이 트리거 됩니다.
+
+그리고 이제 HTML의 버튼 태그에 Vue를 이용한 특수한 속성`(v-on)`을 추가해서 수신할 이벤트 이름인 `click`을 입력해주면 됩니다.
+
+그 값으로 클릭할 때 트리거 될 함수를 지정해주면 됩니다. 위에서 만든 함수인 addGoal()이 되겠죠.
+
+```html
+<button v-on:click="addGoal">Add Goal</button>
+```
+
+이렇게 하면 Vue에서는 addGole 메서드를 버튼이 클릭될때마다 실행됩니다.
+
+<br>
+
+이제 마지막으로 순서가 없는 목록(ul)에서 Goal을 출력하는 일만 남았습니다.
+
+HTML의 `li`태그에 `v-for=""`속성을 추가해줍니다.
+
+이를 요소에 추가해 여러번 복제할 수 있습니다.
+
+```html
+<li v-for="goal in goals">
+```
+
+<br>
+
+위처럼 태그에 속성을 추가해서 goals 배열 전체에 Loop를 걸고 goal 마다 list를 하나씩 생성하도록 해야합니다.
+
+저렇게 속성을 붙여주고 특수한 구문`(이중 중괄호)`으로 goal을 출력할 수 있습니다.
+
+```html
+<li v-for="goal in goals>{{ goal }}</li>
+```
+
+이제 리스트가 필요한만큼 복제 될겁니다.
+
+<br>
+
+이제 진짜 마지막으로 Vue앱이 페이지의 어느부분을 조정할지 Vue앱에 알려줘야 합니다.
+
+위에서 쓴 모든 HTML의 특수속성이 id가 app인 div안에 전부 들어가있습니다.
+
+즉, Vue 앱이 컨트롤할 화면은 바로 저 div 태그부분 입니다.
+
+<br>
+
+이제 어디를 컨트롤 할지 알았습니다.
+
+app.js 파일의 `Vue.createApp()의 마지막 부분으로 가서 `mount()를 추가하고 인자로는,
+
+CSS 선택자가 있는 문자열을 전달해서 DOM의 요소`#app`를 선택합니다.
+
+결과물은 이렇게 됩니다.
+
+![img](https://raw.githubusercontent.com/spacdustz/Obsidian-Image-Server/main/img/vue.png)
 
 </details>
