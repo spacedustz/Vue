@@ -13,6 +13,9 @@ function addGoal() {
 
   // 프로그래밍 방식으로 생성한 listItemEl을 Child로 추가
   listEl.appendChild(listItemEl);
+
+  // 이전의 Goal들 삭제
+  inputEl.value = '';
 }
 
 // ButtonEl에 Clien Listener 추가해서 버튼에 접근하여 클릭 이벤트 수신
