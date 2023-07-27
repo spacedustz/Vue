@@ -19,3 +19,4 @@ Learn Vue.js Framework
 - [v-bind 디렉티브 속성 바인딩](https://github.com/spacedustz/Vue/tree/main/2-Start-Vue/v-bind.md)
 - [Vue의 Method 이해하기](https://github.com/spacedustz/Vue/tree/main/2-Start-Vue/Vue-Method.md)
 - [v-html 디렉티브 이해하기](https://github.com/spacedustz/Vue/tree/main/2-Start-Vue/v-html.md)
+- [Event Binding 이해하기](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Binding.md)
