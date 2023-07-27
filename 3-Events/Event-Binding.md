@@ -81,4 +81,6 @@ click 속성뿐만 아니라 mouseenter, mouseleave 등 순수 자바스크립�
 
 여기서 숫자를 더하고 리스너를 다루고 p태그에 바인딩된 counter의 값을 이벤트를 수신해서 값을 변경하는 일이 모두 Vue의 역할입니다.
 
-짧은 코드일지라도 이 부분이 핵심이고 정적인 페이지가 아닌 동적으로 바인딩된 데이터가 사용자의 입력값이나 이벤트를 수신해서 동적으로 바뀐다는게 핵심이라고 할 수 있습니다.
+짧은 코드일지라도 이 부분이 핵심이고 정적인 페이지가 아닌 동적으로 바인딩된 데이터가 사용자의 입력값이나 이벤트를 수신해서 동적으로 바뀌는 Vue만의 반응성이 핵심이라고 할 수 있습니다.
+
+![img](https://raw.githubusercontent.com/spacedustz/Obsidian-Image-Server/main/img/vue-event.png)
