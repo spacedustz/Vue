@@ -27,4 +27,4 @@ app.mount('#user-goal');
 
 ```html
 <p>Learn More<a v-bind:href="vueLink">about Vue</a></p>
-```
+``` 
