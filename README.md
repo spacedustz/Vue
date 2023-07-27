@@ -27,3 +27,4 @@ Learn Vue.js Framework
 - [Event Binding Method 이해하기](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Binding-Function.md)
 - [Native Event Object](https://github.com/spacedustz/Vue/tree/main/3-Events/Native-Event-Object.md)
 - [Event Modifier](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Modifier.md)
+- [Section3 과제 완료](https://github.com/spacedustz/Vue/tree/main/3-Events/Assignment)
