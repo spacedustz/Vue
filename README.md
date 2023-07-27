@@ -24,4 +24,4 @@ Learn Vue.js Framework
 
 3. Events
 - [Event Binding 이해하기](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Binding.md)
-- [Event Bindind Method 이해하기](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Binding-Function.md)
+- [Event Binding Method 이해하기](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Binding-Function.md)
