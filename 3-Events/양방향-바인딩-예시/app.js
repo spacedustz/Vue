@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      fullname: ''
     };
   },
 
@@ -28,6 +29,23 @@ const app = Vue.createApp({
       return this.name + ' ' + 'Schwarzmuller';
       }
     },
+
+    watch: {
+      // name(value) {
+      //   if (value === '') {
+      //     this.fullname = '';
+      //   } else {
+      //     this.fullname = value + ' ' + 'Schwarzmuller';
+      //   }
+      // }
+      counter(value) {
+        if (value > 50) {
+          const that = this;
+          setTimeout(function() {that.counter = 0;}, 2000);
+        }
+      }
+    },
+
     computed: {
       fullName() {
         console.log('로그 찍기');
