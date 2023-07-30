@@ -28,3 +28,4 @@ Learn Vue.js Framework
 - [Native Event Object](https://github.com/spacedustz/Vue/tree/main/3-Events/Native-Event-Object.md)
 - [Event Modifier](https://github.com/spacedustz/Vue/tree/main/3-Events/Event-Modifier.md)
 - [Section3 과제 완료](https://github.com/spacedustz/Vue/tree/main/3-Events/Assignment)
+- [양방향 바인딩](https://github.com/spacedustz/Vue/tree/main/3-Events/vmodel.md)
