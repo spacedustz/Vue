@@ -43,7 +43,7 @@ Learn Vue.js Framework
 
 <br>
 
-## v-bind & v-on 축약어
+#### v-bind & v-on 축약어
 
 연산 프로퍼티와 Watcher에 직접적인 관련은 없지만 Vue와는 관련이 있습니다.
 
