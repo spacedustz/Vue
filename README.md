@@ -30,3 +30,4 @@ Learn Vue.js Framework
 - [Section3 과제 완료](https://github.com/spacedustz/Vue/tree/main/3-Events/Assignment)
 - [양방향 바인딩](https://github.com/spacedustz/Vue/tree/main/3-Events/vmodel.md)
 - [Computed Property](https://github.com/spacedustz/Vue/tree/main/3-Events/Computed-Property.md)
+- [Watcher](https://github.com/spacedustz/Vue/tree/main/3-Events/Watcher.md)
