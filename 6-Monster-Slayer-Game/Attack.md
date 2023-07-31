@@ -120,14 +120,9 @@ Vue.createApp({
 
 내부에서 바로 attackPlayer() 를 호출해서 서로 공격을 하여 HP를 감소시킵니다.
 
-<br>
+### 공격력
 
 공격력은 Math.floor 함수와 Math.Random 함수를 이용하여 최소값, 최대값을 설정할 수 있는 자바스크립트 함수인 getRandomValue(min, max) 함수를 만들어 사용하였습니다.
-
-<br>
-
-
-**공격력의 범위는**
 
 - 몬스터 : 5 ~ 12
 - 플레이어: 8 ~ 15
@@ -136,8 +131,41 @@ Vue.createApp({
 
 <br>
 
+### HP Bar 조정
+
 감소된 HP 바를 조정하는 방법에는 div 태그의 width 속성을 이용하여, 
 
 동적인 스타일링 방식으로 감소된 HP의 수치와 문자열인 `%`를 더해서 width의 수치값을 조정해주어 HP 바가 줄어들게 세팅했습니다.
+
+<br>
+
+### 개선할 점
+
+저번에도 말했듯이 HTML에 너무 많은 로직이 있으면 안좋기 때문에 동적 스타일 바인딩 했던 `:style` 부분을 Computed Property로 빼겠습니다.
+
+```javascript
+  computed: {
+    playerBarStyle() {
+      return { width: this.playerHp + '%' }
+    },
+
+    monsterBarStyle() {
+      return { width: this.monsterHp + '%' }
+    }
+  }
+```
+
+위처럼 연산 프로퍼티를 만들어주고,
+
+<br>
+
+```html
+<div class="healthbar__value" :style="monterBarStyle"></div>
+<div class="healthbar__value" :style="playerBarStyle"></div>
+```
+
+HTML의 동적 스타일링에 연산 프로파티를 바인딩해줍니다.
+
+<br>
 
 이제 곧 바로 특수 공격에 대한 기능 추가를 해보겠습니다.

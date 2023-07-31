@@ -24,7 +24,13 @@ Vue.createApp({
   },
   
   computed: {
+    playerBarStyle() {
+      return { width: this.playerHp + '%' }
+    },
 
-  },
+    monsterBarStyle() {
+      return { width: this.monsterHp + '%' }
+    }
+  }
 
 }).mount('#game');
