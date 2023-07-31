@@ -44,4 +44,4 @@ Learn Vue.js Framework
 <br>
 
 5. Conditional Rendering
-- [Conditional Rendering 시작](https://github.com/spacedustz/Vue/tree/main/5-Conditional-Rendering/Conditional-Rendering.md)
+- [Conditional Rendering](https://github.com/spacedustz/Vue/tree/main/5-Conditional-Rendering/Conditional-Rendering.md)
