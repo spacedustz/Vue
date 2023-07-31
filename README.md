@@ -47,3 +47,8 @@ Learn Vue.js Framework
 - [Conditional Rendering: v-if,v-else.v-for](https://github.com/spacedustz/Vue/tree/main/5-Conditional-Rendering/Conditional-Rendering.md)
 - [V-for Advanced](https://github.com/spacedustz/Vue/tree/main/5-Conditional-Rendering/v-for-advanced.md)
 - [Section5 과제 완료](https://github.com/spacedustz/Vue/tree/main/5-Conditional-Rendering/Assignment)
+
+<br>
+
+6. Monster Slayer Game 만들기
+- [Monster Slayer - 공격 기능 만들기](https://github.com/spacedustz/Vue/tree/main/6-Monster-Slayer-Game/Attack.md)
