@@ -20,13 +20,13 @@
       <section id="monster" class="container">
         <h2>Monster Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value" :style="{width: monsterHp + '%'}"></div>
+          <div class="healthbar__value" :style="monsterBarStyle"></div>
         </div>
       </section>
       <section id="player" class="container">
         <h2>Your Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value" :style="{width: playerHp + '%'}"></div>
+          <div class="healthbar__value" :style="playerBarStyle"></div>
         </div>
       </section>
       <section id="controls">
