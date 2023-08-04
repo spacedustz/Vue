@@ -52,3 +52,15 @@ Learn Vue.js Framework
 
 6. Monster Slayer Game 만들기
 - [Monster Slayer - 공격 기능 만들기](https://github.com/spacedustz/Vue/tree/main/6-Monster-Slayer-Game/Attack.md)
+- 일시 중단
+
+---
+
+### 빠른 강의 진행을 위해 설명 스킵하고 진행
+
+- Component Custom Event & emit & props
+- Global Component & Local Component
+- Scoped Styling
+- Slots & Named Slots & Scoped Slots
+- Dynamic Component & Dynamic Component를 활성 상태로 유지하기
+
