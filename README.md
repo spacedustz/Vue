@@ -82,7 +82,7 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 ### Vue 3 with TypeScript 프로젝트 초기 설정
 
-<detail>
+<details>
 <summary>펼치기</summary>
 
 ## BootStrap 설치 & 적용
@@ -149,6 +149,6 @@ lintOnSave:false
 ```
 npm i -D eslint@7.32.0
 ```
-</detail>
+</details>
 
 ---
