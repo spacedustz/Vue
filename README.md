@@ -148,6 +148,7 @@ lintOnSave:false
 
 ```
 npm i -D eslint@7.32.0
+npm install eslint@">=1.6.0 <7.0.0"
 ```
 </details>
 
