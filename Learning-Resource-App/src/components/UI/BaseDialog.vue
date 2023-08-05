@@ -1,24 +1,26 @@
 <template>
-  <div @click="$emit('close')"></div>
-  <dialog open>
-    <header>
-      <slot name="header">
-        <h2>{{ title }}</h2>
-      </slot>
-    </header>
+  <teleport to="body">
+    <div @click="$emit('close')"></div>
+    <dialog open>
+      <header>
+        <slot name="header">
+          <h2>{{ title }}</h2>
+        </slot>
+      </header>
 
-    <!-- Dialog의 주 컨텐츠 -->
-    <section>
-      <slot></slot>
-    </section>
+      <!-- Dialog의 주 컨텐츠 -->
+      <section>
+        <slot></slot>
+      </section>
 
-    <!-- 사용자가 클릭할 버튼 표시 -->
-    <menu>
-      <slot name="actions">
-        <base-button @click="$emit('close')">닫기</base-button>
-      </slot>
-    </menu>
-  </dialog>
+      <!-- 사용자가 클릭할 버튼 표시 -->
+      <menu>
+        <slot name="actions">
+          <base-button @click="$emit('close')">닫기</base-button>
+        </slot>
+      </menu>
+    </dialog>
+  </teleport>
 </template>
 
 <script>
