@@ -66,13 +66,19 @@ export default {
       this.storedResources.unshift(newResource);
       // 리소스를 추가할때마다 탭이 바뀌게 함
       this.selectedTab = 'stored-resources';
+    },
+    // 리소스 삭제 함수
+    removeResource(resId) {
+      const resIndex = this.storedResources.findIndex(res => res.id === resId);
+      this.storedResources.splice(resIndex, 1);
     }
   },
 
   provide() {
     return {
       resources: this.storedResources,
-      addResource: this.addResource
+      addResource: this.addResource,
+      deleteResource: this.removeResource
     };
   },
 }

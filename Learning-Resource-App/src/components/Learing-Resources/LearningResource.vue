@@ -3,7 +3,7 @@
     <base-card>
       <header>
         <h3>{{ title }}</h3>
-        <base-button mode="flat">삭제</base-button>
+        <base-button mode="flat" @click="deleteResource(id)">삭제</base-button>
       </header>
       <p>{{ description }}</p>
       <nav>
@@ -17,7 +17,8 @@
 import BaseButton from "@/components/UI/BaseButton";
 export default {
   components: {BaseButton},
-  props: ['title', 'description', 'link'],
+  props: ['id', 'title', 'description', 'link'],
+  inject: ['deleteResource']
 
 }
 </script>
