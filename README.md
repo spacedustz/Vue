@@ -1,6 +1,8 @@
 ## Vue
 Learn Vue.js Framework
 
+Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
+
 ---
 
 ## 학습한 목록
