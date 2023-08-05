@@ -68,6 +68,7 @@ _여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다�
 - [4. 동적 컴포넌트 및 속성 풀스루](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/4.md)
 - [5. Resource Form 추가 - 입력값 받기](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/5.md)
 - [6. Custom Dialog를 이용한 Validation](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/6.md)
+- [7. Resource 삭제 기능 구현](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/7.md)
 
 ---
 
