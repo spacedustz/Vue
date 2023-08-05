@@ -54,7 +54,10 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 6. Monster Slayer Game 만들기
 - [Monster Slayer - 공격 기능 만들기](https://github.com/spacedustz/Vue/tree/main/6-Monster-Slayer-Game/Attack.md)
-- 일시 중단
+
+<br>
+
+여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다시 정리
 
 ---
 
@@ -65,4 +68,12 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 - Scoped Styling
 - Slots & Named Slots & Scoped Slots
 - Dynamic Component & Dynamic Component를 활성 상태로 유지하기
-
+- Global & Local 컴포넌트
+- Scoped Style (scoped가 붙으면 해당 컴포넌트에만 Style이 적용됨)
+- Slot : 컴포넌트 외부에서 삽입되는 동적 HTML 코드의 PlaceHolder로 사용될 수 있음, 여러 슬롯을 사용할떈 슬롯 이름을 정해야 하며, 이름이 없는 슬롯은 Default 슬롯으로 지정된다.
+- 동적 컴포넌트 : `<component is="">`
+- 동적 컴포넌트를 활성상태로 유지 `<keep-alive>`
+- `<dialog  open>`
+- Teleport : 컴포넌트 계층을 유지하면서 DOM의 구조를 조작하고 DOM에 추가되는 부분을 제어 `<teleport to="">`
+- fragment : 상위 HTML Elements들을 Vue3부턴 여러개를 쓸 수 있음
+- Convention
