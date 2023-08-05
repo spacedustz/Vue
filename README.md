@@ -57,7 +57,9 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 <br>
 
-여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다시 정리
+_여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다시 정리_
+
+<br>
 
 7. 학습 기록 앱 만들기
 - [1. Start + Styling](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/1.md)
