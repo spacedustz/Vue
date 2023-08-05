@@ -3,11 +3,11 @@
     <base-card>
       <header>
         <h3>{{ title }}</h3>
-        <base-button mode="flat">Delete</base-button>
+        <base-button mode="flat">삭제</base-button>
       </header>
       <p>{{ description }}</p>
       <nav>
-        <a :href="link">View Resource</a>
+        <a :href="link">자료 보기</a>
       </nav>
     </base-card>
   </li>
