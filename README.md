@@ -59,6 +59,14 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다시 정리
 
+7. 학습 기록 앱 만들기
+- [1. Start + Styling](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/1.md)
+- [2. UI Component 추가](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/2.md)
+- [3. Base Button 추가](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/3.md)
+- [4. 동적 컴포넌트 및 속성 풀스루](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/4.md)
+- [5. Resource Form 추가 - 입력값 받기](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/5.md)
+- [6. Custom Dialog를 이용한 Validation](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/6.md)
+
 ---
 
 ### 빠른 강의 진행을 위해 설명 스킵하고 진행
