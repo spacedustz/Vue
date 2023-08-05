@@ -86,7 +86,7 @@ _여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다�
 - `<dialog  open>`
 - Teleport : 컴포넌트 계층을 유지하면서 DOM의 구조를 조작하고 DOM에 추가되는 부분을 제어 `<teleport to="">`
 - fragment : 상위 HTML Elements들을 Vue3부턴 여러개를 쓸 수 있음
-- Convention
+- Convention (케밥케이스, 카멜케이스 등)
 
 ---
 
