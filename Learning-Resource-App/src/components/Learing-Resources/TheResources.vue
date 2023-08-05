@@ -15,9 +15,10 @@ import BaseCard from "@/components/UI/BaseCard";
 import BaseButton from "@/components/UI/BaseButton";
 import TheResources from './StoredResources.vue';
 import AddResource from './AddResource.vue';
+import StoredResources from "@/components/Learing-Resources/StoredResources";
 
 export default {
-  components: { BaseButton, BaseCard, TheResources, AddResource },
+  components: { BaseButton, BaseCard, TheResources, AddResource, StoredResources },
 
   data() {
     return {
@@ -51,12 +52,25 @@ export default {
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
+    },
+    addResource(title, description, url) {
+      const newResource = {
+        id: new Date().toISOString(),
+        title: title,
+        description: description,
+        link: url
+      };
+      // 배열의 맨앞에 추가 (unshift)
+      this.storedResources.unshift(newResource);
+      // 리소스를 추가할때마다 탭이 바뀌게 함
+      this.selectedTab = 'stored-resources';
     }
   },
 
   provide() {
     return {
-      resources: this.storedResources
+      resources: this.storedResources,
+      addResource: this.addResource
     };
   },
 }
