@@ -1,21 +1,14 @@
 <template>
-  <ul>
-    <learning-resource
-        v-for="res in storedResources"
-        :key="res.id"
-        :title="res.title"
-        :description="res.description"
-        :link="res.link"
-    ></learning-resource>
-  </ul>
+  <base-header title="학습 기록"></base-header>
+  <stored-resources :resources="storedResources"></stored-resources>
 </template>
 
 <script>
-import LearningResource from './components/Learing-Resources/LearningResource.vue';
+import StoredResources from "@/components/Learing-Resources/StoredResources";
+import BaseHeader from "@/components/Layouts/BaseHeader";
+
 export default {
-  components: {
-    LearningResource
-  },
+  components: { StoredResources, BaseHeader },
 
   data() {
     return {
@@ -35,10 +28,21 @@ export default {
       ]
     };
   },
-
 }
 </script>
 
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
 </style>
