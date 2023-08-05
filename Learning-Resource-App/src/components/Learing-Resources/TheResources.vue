@@ -7,7 +7,9 @@
         @click="setSelectedTab('add-resource')"
         :mode="addResButtonMode">학습 추가</base-button>
   </base-card>
-  <component :is="selectedTab"></component>
+  <keep-alive>
+    <component :is="selectedTab"></component>
+  </keep-alive>
 </template>
 
 <script>
