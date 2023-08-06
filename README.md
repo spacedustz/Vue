@@ -70,6 +70,8 @@ _여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다�
 - [6. Custom Dialog를 이용한 Validation](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/6.md)
 - [7. Resource 삭제 기능 구현](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/7.md)
 
+<br>
+
 8. HTTP Request (Fetch & Axios)
 - [Native Fetch API를 이용한 HTTP Request 전송](https://github.com/spacedustz/Vue/blob/main/Description/HTTP-Request.md)
 
