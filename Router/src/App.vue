@@ -1,6 +1,7 @@
 <template>
   <the-navigation @set-page="setActivePage"></the-navigation>
   <main>
+    <router-view></router-view>
     <component :is="activePage"></component>
   </main>
 </template>
