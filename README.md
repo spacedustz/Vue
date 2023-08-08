@@ -77,6 +77,10 @@ _여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다�
 
 ---
 
+9. Option API -> Composition API 적용
+- [Data -> Refs로 대체 + Setup 함수](https://github.com/spacedustz/Vue/blob/main/Description/Composition-API-1.md)
+
+
 ### 빠른 강의 진행을 위해 설명 스킵하고 진행
 
 - Component Custom Event & emit & props
