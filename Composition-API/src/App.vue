@@ -1,3 +1,27 @@
+<!--<template>-->
+<!--  <section class="container">-->
+<!--    <h2>{{ user.name }}</h2>-->
+<!--    <h3>{{ user.age }}</h3>-->
+<!--  </section>-->
+<!--</template>-->
+
+<!--<script setup>-->
+<!--import { ref } from 'vue'-->
+
+<!--// const name = ref('Maximilian');-->
+<!--// const age = ref(31);-->
+
+<!--const user = ref({-->
+<!--  name: 'Maximilian',-->
+<!--  age: 31-->
+<!--})-->
+
+<!--  setTimeout(function() {-->
+<!--    user.value.name = 'Max'-->
+<!--    user.value.age = 32-->
+<!--  }, 2000)-->
+<!--</script>-->
+
 <template>
   <section class="container">
     <h2>{{ user.name }}</h2>
@@ -6,20 +30,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
 // const name = ref('Maximilian');
 // const age = ref(31);
 
-const user = ref({
+const user = reactive({
   name: 'Maximilian',
   age: 31
 })
 
-  setTimeout(function() {
-    user.value.name = 'Max'
-    user.value.age = 32
-  }, 2000)
+setTimeout(function() {
+  user.name = 'Max'
+  user.age = 32
+}, 2000)
 </script>
 
 <style>
