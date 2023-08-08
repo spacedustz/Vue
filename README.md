@@ -166,6 +166,14 @@ lintOnSave:false
 npm i -D eslint@7.32.0
 npm install eslint@">=1.6.0 <7.0.0"
 ```
+
+<br>
+
+## Router 설치
+
+```
+npm i vue-router@next --save
+```
 </details>
 
 ---
