@@ -174,6 +174,14 @@ npm install eslint@">=1.6.0 <7.0.0"
 ```
 npm i vue-router@next --save
 ```
+
+<br>
+
+## Vuex 설치
+
+```
+npm i vuex@next --save
+```
 </details>
 
 ---
