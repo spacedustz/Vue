@@ -24,26 +24,33 @@
 
 <template>
   <section class="container">
-    <h2>{{ user.name }}</h2>
+    <h2>{{ fullName }}</h2>
     <h3>{{ user.age }}</h3>
+    <button @click="setAge">Change Age</button>
+    <div>
+      <input type="text" placeholder="First Name" v-model="user.firstName" />
+      <input type="text" placeholder="Last Name" v-model="user.lastName" />
+    </div>
   </section>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 
-// const name = ref('Maximilian');
-// const age = ref(31);
-
+// Data Property
 const user = reactive({
-  name: 'Maximilian',
-  age: 31
+  age: 31,
+  firstName: ref(''),
+  lastName: ref('')
 })
 
-setTimeout(function() {
-  user.name = 'Max'
-  user.age = 32
-}, 2000)
+// Computed Function
+const fullName = computed(function() { return user.firstName + ' ' + user.lastName })
+
+// methods -> Function
+function setAge() { user.age = 32 }
+
+// Watcher
 </script>
 
 <style>
