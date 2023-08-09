@@ -39,9 +39,9 @@ methods: {
 ```javascript
 // Composition API
 setup() {
-    const name = ref('Max');
-    function doSmth() { ... }
-    return { name, doSmth };
+const name = ref('Max');
+function doSmth() { ... }
+return { name, doSmth };
 }
 ```
 
@@ -231,6 +231,7 @@ setTimeOut(function() {
 }, 2000);
 </script>
 ```
+
 <br>
 
-`setup>`과 `setup()` 메서드 중 어느 것을 사용하든 이 강의에서 배우는 내용은 여전히 같은 방식으로 작동합니다.
+` script setup`과 `setup()` 메서드 중 어느 것을 사용하든 여전히 같은 방식으로 작동합니다.
