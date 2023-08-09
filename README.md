@@ -57,7 +57,7 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 <br>
 
-_여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다시 정리_
+_여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중에 다시 정리_
 
 <br>
 
@@ -75,11 +75,19 @@ _여기서 잠시 메모 일시중단 하고 강의 먼저 빠르게 듣고 다�
 8. HTTP Request (Fetch & Axios)
 - [Native Fetch API를 이용한 HTTP Request 전송](https://github.com/spacedustz/Vue/blob/main/Description/HTTP-Request.md)
 
+<br>
+
+9. Vue Router
+- [Vue Router](https://github.com/spacedustz/Vue/blob/main/Description/Router.md)
+
+<br>
+
+10. Option API -> Composition API 적용
+- [Data -> Refs로 대체 + Setup 함수](https://github.com/spacedustz/Vue/blob/main/Description/Composition-Setup.md)
+- [Reactive Object](https://github.com/spacedustz/Vue/blob/main/Description/Composition-Reactive.md)
+
+
 ---
-
-9. Option API -> Composition API 적용
-- [Data -> Refs로 대체 + Setup 함수](https://github.com/spacedustz/Vue/blob/main/Description/Composition-API-1.md)
-
 
 ### 빠른 강의 진행을 위해 설명 스킵하고 진행
 
