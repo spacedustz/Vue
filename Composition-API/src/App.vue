@@ -24,18 +24,24 @@
 
 <template>
   <section class="container">
-    <h2>{{ fullName }}</h2>
-    <h3>{{ user.age }}</h3>
+    <user-data :first-name="user.firstName" :last-name="user.lastName"></user-data>
+<!--    <h2>{{ fullName }}</h2>-->
+<!--    <h3>{{ user.age }}</h3>-->
     <button @click="setAge">Change Age</button>
     <div>
       <input type="text" placeholder="First Name" v-model="user.firstName" />
-      <input type="text" placeholder="Last Name" v-model="user.lastName" />
+      <input type="text" placeholder="Last Name" ref="lastNameInput" />
+      <button @click="setLastName">Set Last Name</button>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue'
+import { ref, reactive, watch, provide } from 'vue'
+import UserData from "./components/UserData"
+
+// Provide, 1: 임의 식별자 2: 전달하고자 하는 실제 값
+provide('userAge', user.age)
 
 // Data Property
 const user = reactive({
@@ -44,11 +50,14 @@ const user = reactive({
   lastName: ref('')
 })
 
+const lastNameInput = ref(null);
+
 // Computed Function
-const fullName = computed(function() { return user.firstName + ' ' + user.lastName })
+// const fullName = computed(function() { return user.firstName + ' ' + user.lastName })
 
 // methods -> Function
 function setAge() { user.age = 32 }
+function setLastName() { user.lastName = lastNameInput.value.value; }
 
 // Watcher
 watch([() => user.age, () => user.firstName], function (newValues, oldValues) {
