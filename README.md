@@ -85,7 +85,7 @@ _여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중�
 10. Option API -> Composition API 적용
 - [Data -> Refs로 대체 + Setup 함수](https://github.com/spacedustz/Vue/blob/main/Description/Composition-Setup.md)
 - [Reactive Object](https://github.com/spacedustz/Vue/blob/main/Description/Composition-Reactive.md)
-
+- [Methods & Computed & Watcher](https://github.com/spacedustz/Vue/blob/main/Description/Composition-Methods-Computed-Watcher.md)
 
 ---
 
