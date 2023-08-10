@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, watch } from 'vue'
 
 // Data Property
 const user = reactive({
@@ -51,6 +51,12 @@ const fullName = computed(function() { return user.firstName + ' ' + user.lastNa
 function setAge() { user.age = 32 }
 
 // Watcher
+watch([() => user.age, () => user.firstName], function (newValues, oldValues) {
+  console.log('Old Age : ' + oldValues[0])
+  console.log('New Age : ' + newValues[0])
+  console.log('Old FirstName : ' + oldValues[1])
+  console.log('New FirstName : ' + newValues[1])
+})
 </script>
 
 <style>
