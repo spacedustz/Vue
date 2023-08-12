@@ -10,6 +10,14 @@ const store = createStore({
         return {
             counter: 0
         };
+    },
+
+    // 상태를 변경하는 Mutation
+    mutations: {
+        // 현재 상태를 파라미터로 받음
+        increment(state) {
+            state.counter = state.counter + 1;
+        }
     }
 });
 const app = createApp(App);
