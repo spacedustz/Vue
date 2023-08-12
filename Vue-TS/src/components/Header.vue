@@ -1,3 +1,5 @@
+<!-- BootStrap BreadCrumb 사용 -->
+<!-- router-link를 통해 모든 할일 목록, 해야하는 목록, 진행 한 목록 을 분류함 -->
 <template>
   <header class="header">
     <h1 class="header__title">TODO LIST</h1>
