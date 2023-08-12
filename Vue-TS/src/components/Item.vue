@@ -1,10 +1,20 @@
 <template>
   <div class="input-group">
+
     <div class="input-group-text">
-      <input class="form-check-input mt-0" type="checkbox" />
+
+      <!-- props에서 넘어온 상태값이 clear라면 체크박스를 체크 한다 -->
+      <input
+          class="form-check-input mt-0"
+          type="checkbox"
+          :checked="props.status === 'clear'"
+      />
     </div>
-    <input type="text" class="form-control" value="밥 잘먹기" disabled />
+
+    <!-- props로 받아온 title을 바인딩 -->
+    <input type="text" class="form-control" :value="props.title" disabled/>
     <button class="btn btn-outline-secondary" type="button">X</button>
+
   </div>
 </template>
 
@@ -14,7 +24,18 @@ export default {
 };
 </script>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { defineProps } from "vue";
+
+interface TodoItem {
+  id: number;
+  title: string;
+  status: "active" | "clear";
+}
+
+// 컴포넌트에서 필요한 Props를 전달해줌 (id, title, status)
+const props = defineProps<TodoItem>();
+</script>
 
 <style lang="scss">
 .input-group {
