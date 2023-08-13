@@ -108,3 +108,37 @@ function addOne() {
   });  
 }
 ```
+
+---
+
+## Vuex - Action Context
+
+Actions의 context 파라미터에 대해 좀 더 자세히 알아보겠습니다.
+
+context 자체를 로그로 찍어보면
+
+- commit
+- dispatch
+- getters
+- rootGetters
+- rootState
+- state
+- __proto__
+
+등등이 있습니다.
+
+<br>
+
+여기서 Dispatch는 작업 내부에서 다른 작업을 전달할 수 있습니다. (ex: SenddHTTP Request, Error Handling)
+
+즉, 요청이 성공하면 성공 액션을 트리거하고, 오류가 발생하면 오류 처리 액션을 트리거 할 수 있습니다.
+
+HTTP Request에 대한 결과에 대한 반응으로 다른 작업들을 전달하는 하나의 액션을 만들수도 있죠.
+
+<br>
+
+Getters를 사용하여 Getter에서 얻는 특정 값을 가져올 수도 있습니다.
+
+Getters를 이용하는 것으로 충분하기 않을 때에는 State도 직접적으로 사용할 수 있습니다.
+
+**하지만 Actions 내부에서 State를 조작해서는 안되며, 항상 Mutations을 사용해야 합니다.**
