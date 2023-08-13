@@ -18,6 +18,20 @@ const store = createStore({
         increment(state) {
             state.counter = state.counter + 1;
         }
+    },
+    getters: {
+        // 상태, getters 2개의 파람터를 받을 수 있음
+        finalCounter(state) {
+            return state.counter * 2;
+        },
+        normalizedCounter(_, getters) {
+           const finalCounter = getters.finalCounter;
+
+           if (finalCounter < 0) return 0;
+           if (finalCounter > 100) return 100;
+
+           return finalCounter;
+        }
     }
 });
 const app = createApp(App);
