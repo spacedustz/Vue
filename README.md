@@ -92,7 +92,7 @@ _여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중�
 
 11. Vuex
 - [Vuex Basic + Mutation](https://github.com/spacedustz/Vue/blob/main/Description/Vuex-Basic-Mutation.md)
-- [Vuex Actions](https://github.com/spacedustz/Vue/blob/main/Description/Vuex-Actions.md)
+- [Vuex Actions + Actions Context](https://github.com/spacedustz/Vue/blob/main/Description/Vuex-Actions.md)
 
 ---
 
