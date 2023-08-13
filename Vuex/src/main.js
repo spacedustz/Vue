@@ -1,5 +1,5 @@
-import { createApp } from 'vue';
-import { createStore } from "vuex"; // Import Vuex Store
+import {createApp} from 'vue';
+import {createStore} from "vuex"; // Import Vuex Store
 
 import App from './App.vue';
 
@@ -17,6 +17,9 @@ const store = createStore({
         // 현재 상태를 파라미터로 받음
         increment(state) {
             state.counter = state.counter + 1;
+        },
+        increase(state, payload) {
+            state.counter = state.counter + payload.value;
         }
     },
     getters: {
@@ -25,12 +28,24 @@ const store = createStore({
             return state.counter * 2;
         },
         normalizedCounter(_, getters) {
-           const finalCounter = getters.finalCounter;
+            const finalCounter = getters.finalCounter;
 
-           if (finalCounter < 0) return 0;
-           if (finalCounter > 100) return 100;
+            if (finalCounter < 0) return 0;
+            if (finalCounter > 100) return 100;
 
-           return finalCounter;
+            return finalCounter;
+        }
+    },
+    actions: {
+        // 파라미터로 context라는 객체를 받는다.
+        increment(context) {
+            setTimeout(function () {
+                context.commit('increment');
+            }, 2000);
+        },
+        // 이 Actions은 Dispatch 함수에 추가된 Payload를 받는다.
+        increase(context, payload) {
+          context.commit('increase', payload);
         }
     }
 });
