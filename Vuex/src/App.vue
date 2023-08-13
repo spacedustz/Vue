@@ -16,8 +16,12 @@ import ChangeCounter from "@/components/ChangeCounter";
 const store = useStore(); // Vuex
 
 function addOne() {
-  // Mutation의 이름을 commit에 넣어 Mutation을 불러옴
-  store.commit("increment");
+  // Mutation의 이름을 commit에 넣어 Mutation을 불러옴 - X
+  // Actions로 변경
+  store.dispatch({
+    type: 'increment',
+    value: 10
+  });
 }
 </script>
 

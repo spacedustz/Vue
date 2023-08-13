@@ -15,7 +15,7 @@ const store = useStore();
 
 function addOne() {
   // Mutation의 이름을 commit에 넣어 Mutation을 불러옴
-  store.commit('increment');
+  store.dispatch('increment');
 }
 </script>
 
