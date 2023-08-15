@@ -97,6 +97,7 @@ _여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중�
 <br>
 
 12. TypeScript 배우기
+- [TypeScript TS-Node 세팅](https://github.com/spacedustz/Vue/blob/main/TypeScript/Setup.md)
 - [TypeScript - Type](https://github.com/spacedustz/Vue/blob/main/Description/TS/Type.md)
 
 ---
