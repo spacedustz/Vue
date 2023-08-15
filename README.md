@@ -6,7 +6,8 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 ---
 
 ## 학습한 목록
-
+<details>
+<summary>펼치기</summary>
 
 1. Basic-Without-Vue
 - [Without JS](https://github.com/spacedustz/Vue/tree/main/1-Basic-Without-Vue/Without-Vue.md)
@@ -95,6 +96,7 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 12. TypeScript 배우기
 - [TypeScript TS-Node 세팅](https://github.com/spacedustz/Vue/blob/main/TypeScript/Setup.md)
 - [TypeScript - Type](https://github.com/spacedustz/Vue/blob/main/Description/TS/Type.md)
+</details>
 
 ---
 
