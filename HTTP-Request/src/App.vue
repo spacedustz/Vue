@@ -1,14 +1,17 @@
 <template>
   <learning-survey @survey-submit="storeSurvey"></learning-survey>
   <user-experiences :results="savedSurveyResults"></user-experiences>
+  <request-backend></request-backend>
 </template>
 
 <script>
 import LearningSurvey from './components/survey/LearningSurvey.vue';
 import UserExperiences from './components/survey/UserExperiences.vue';
+import RequestBackend from "@/components/RequestBackend";
 
 export default {
   components: {
+    RequestBackend,
     LearningSurvey,
     UserExperiences,
   },
