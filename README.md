@@ -57,10 +57,6 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 <br>
 
-_여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중에 다시 정리_
-
-<br>
-
 7. 학습 기록 앱 만들기
 - [1. Start + Styling](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/1.md)
 - [2. UI Component 추가](https://github.com/spacedustz/Vue/blob/main/Learning-Resource-App/desc/2.md)
@@ -208,8 +204,6 @@ npm i vue-router@next --save
 npm i vuex@next --save
 ```
 </details>
-
-<br>
 
 ## Axios 설치
 
