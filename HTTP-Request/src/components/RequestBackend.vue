@@ -2,8 +2,9 @@
   <div>
     <h1>데이터 가져오기 연습</h1>
     <ul>
+      <!-- item 배열 순회 -->
       <li v-for="item in items" :key="item.id">
-        <h3>Event ID: {{ item.id }}</h3>
+        <h3>Event ID: {{ item.eventId }}</h3>
         <p>Frame ID: {{ item.frameId }}</p>
 
         <div v-if="itemHasExtra(item)">
@@ -21,6 +22,7 @@
           </ul>
         </div>
       </li>
+
     </ul>
   </div>
 </template>
