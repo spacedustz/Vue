@@ -203,12 +203,12 @@ npm i vue-router@next --save
 ```
 npm i vuex@next --save
 ```
-</details>
 
 ## Axios 설치
 
 ```
 npm i --save axios
 ```
+</details>
 
 ---
