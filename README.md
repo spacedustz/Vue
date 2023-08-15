@@ -203,4 +203,12 @@ npm i vuex@next --save
 ```
 </details>
 
+<br>
+
+## Axios 설치
+
+```
+npm i --save axios
+```
+
 ---
