@@ -100,6 +100,9 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 ### 빠른 강의 진행을 위해 설명 스킵하고 진행
 
+<details>
+<summary>펼치기</summary>
+
 - Component Custom Event & emit & props
 - Global Component & Local Component
 - Scoped Styling
@@ -114,6 +117,7 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 - Teleport : 컴포넌트 계층을 유지하면서 DOM의 구조를 조작하고 DOM에 추가되는 부분을 제어 `<teleport to="">`
 - fragment : 상위 HTML Elements들을 Vue3부턴 여러개를 쓸 수 있음
 - Convention (케밥케이스, 카멜케이스 등)
+</details>
 
 ---
 
