@@ -94,6 +94,11 @@ _여기서 잠시 메모 대충 하면서 강의 먼저 빠르게 듣고 나중�
 - [Vuex Basic + Mutation](https://github.com/spacedustz/Vue/blob/main/Description/Vuex-Basic-Mutation.md)
 - [Vuex Actions + Actions Context](https://github.com/spacedustz/Vue/blob/main/Description/Vuex-Actions.md)
 
+<br>
+
+12. TypeScript 배우기
+- [TypeScript - Type](https://github.com/spacedustz/Vue/blob/main/Description/TS/Type.md)
+
 ---
 
 ### 빠른 강의 진행을 위해 설명 스킵하고 진행
