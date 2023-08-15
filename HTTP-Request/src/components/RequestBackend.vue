@@ -58,6 +58,62 @@ onMounted(() => {
 });
 </script>
 
+<!-- 타입스크립트 코드 -->
+<!--<script setup lang="ts">-->
+<!--import { ref, onMounted } from 'vue';-->
+<!--import axios from 'axios';-->
+
+<!--interface Vertex {-->
+<!--  id: number;-->
+<!--  x: number;-->
+<!--  y: number;-->
+<!--}-->
+
+<!--interface Bbox {-->
+<!--  height: number;-->
+<!--  width: number;-->
+<!--}-->
+
+<!--interface Extra {-->
+<!--  bbox: Bbox;-->
+<!--  vertices: Vertex[];-->
+<!--}-->
+
+<!--interface Item {-->
+<!--  id: number;-->
+<!--  frameId: number;-->
+<!--  extra?: Extra;-->
+<!--}-->
+
+<!--const items = ref<Item[]>([]);-->
+
+<!--const fetchData = async () => {-->
+<!--  try {-->
+<!--    const response = await axios.get<Item[]>('http://localhost:8081/api/json', { withCredentials: true });-->
+<!--    items.value = response.data;-->
+<!--    console.log(response.data);-->
+<!--  } catch (error) {-->
+<!--    console.error('데이터를 가져오는 동안 오류 발생:', error);-->
+<!--  }-->
+<!--};-->
+
+<!--const itemHasExtra = (item: Item): boolean => {-->
+<!--  return !!item.extra;-->
+<!--};-->
+
+<!--const getBboxHeight = (extra: Extra): number => {-->
+<!--  return extra.bbox.height;-->
+<!--};-->
+
+<!--const getBboxWidth = (extra: Extra): number => {-->
+<!--  return extra.bbox.width;-->
+<!--};-->
+
+<!--onMounted(() => {-->
+<!--  fetchData();-->
+<!--});-->
+<!--</script>-->
+
 <style scoped>
 
 </style>
