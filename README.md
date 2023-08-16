@@ -95,7 +95,7 @@ Vue 2 + JavaScript --> Vue 3 Composition API with TypeScript
 
 12. TypeScript 배우기
 - [TypeScript TS-Node 세팅](https://github.com/spacedustz/Vue/blob/main/TypeScript/Setup.md)
-- [TypeScript - Type](https://github.com/spacedustz/Vue/blob/main/Description/TS/Type.md)
+- [TypeScript - 총정리 (업데이트 중)](https://github.com/spacedustz/Vue/blob/main/Description/TS/Summary.md)
 </details>
 
 ---
