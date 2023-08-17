@@ -530,3 +530,14 @@ function someFunc(val: string|number, isNumber: boolean) {
 따라서 `isNumber`가 `true`일 때 `val`이 숫자음을 다음과 같이 2가지 방식으로 단언할 수 있습니다.
 
 두번째 방식 `(<number>val)`은 JSX를 사용하는 경우 특정 구문 파싱에서 문제가 발생할 수 있으며, 결과적으로 파일에서 사용 불가능합니다.
+
+<br>
+
+## Non-Null 단언 연산자
+
+!를 사용하는 Non-null 단언 연산자(Non-null assertion operator)를 통해 피연산자가 Nullish(null이나 undefined) 값이 아님을 단언할 수 있는데, 변수나 속성에서 간단하게 사용할 수 있기 때문에 유용합니다.
+
+다음 예제 중 fnA 함수를 살펴보면, 매개 변수 x는 함수 내에서 toFixed를 사용하는 숫자 타입으로 처리되지만 null이나 undefined일 수 있기 때문에 에러가 발생합니다.
+
+이를 타입 단언이나 if 조건문으로 해결할 수도 있지만, 마지막 함수와 같이 !를 사용하는 Non-null 단언 연산자를 이용해 간단하게 정리할 수 있습니다.
+

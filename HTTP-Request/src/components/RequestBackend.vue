@@ -22,7 +22,6 @@
           </ul>
         </div>
       </li>
-
     </ul>
   </div>
 </template>
