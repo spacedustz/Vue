@@ -34,7 +34,7 @@ const items = ref([]);
 
 const fetchData = async () => {
   try {
-    const response = await axios.get('http://localhost:8081/api/json', { withCredentials: true });
+    const response = await axios.get('http://localhost:18080/api/json', { withCredentials: true });
     items.value = response.data;
     console.log(response.data);
   } catch (error) {
