@@ -27,7 +27,7 @@ const fetchVideo = async () => {
     videoUrl.value = baseUrl + response.data;
     console.log('Video URL:', videoUrl.value); // #EXT ~~
 
-    const videoElement = document.getElementById('video');
+    const video = document.getElementById('video');
     console.log("is Supported ? = " + Hls.isSupported());
 
     if (Hls.isSupported()) {
@@ -38,14 +38,18 @@ const fetchVideo = async () => {
       // const objectURL = URL.createObjectURL(blob);
       // console.log('Object URL' + objectURL);
       hls.loadSource(videoUrl.value); // Undefined
-      hls.attachMedia(videoElement);
+      hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function () {
         console.log("Manifest_Passed Event 발생")
-        videoElement.play();
+        video.play();
       });
-    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-      videoElement.src = videoUrl.value;
-      videoElement.play();
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoUrl.value;
+      video.addEventListener('loadedmetadata', function() {
+        video.play();
+      });
+    } else {
+      console.error('HLS is not Supported in This Browser')
     }
 
     console.log(response.data);
