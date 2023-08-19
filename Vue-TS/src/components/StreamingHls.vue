@@ -1,8 +1,3 @@
-
-해당 코드를 TypeScript 스크립트 블록을 사용하여 변환해 보겠습니다. 아래는 TypeScript를 사용하여 변환한 코드입니다:
-
-vue
-Copy code
 <template>
   <div class="video" align="center">
     <video id="video" controls="controls" autoplay muted>
