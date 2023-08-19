@@ -1,7 +1,11 @@
 <template>
   <!-- Animation 추가 -->
-  <div class="video" :class="{animate: animatedBlock}" align="center">
+  <div :class="{animate: animatedBlock}">
     <button @click="animateBlock">Animate</button>
+  </div>
+
+  <!-- RTSP -> HLS Video -->
+  <div class="video" align="center">
     <video id="video" controls="controls" autoplay muted>
       <source :src="videoUrl" type="application/x-mpegURL" />
       Your browser does not support HTML5 streaming!
