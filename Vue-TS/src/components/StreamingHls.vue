@@ -1,5 +1,7 @@
 <template>
-  <div class="video" align="center">
+  <!-- Animation 추가 -->
+  <div class="video" :class="{animate: animatedBlock}" align="center">
+    <button @click="animateBlock">Animate</button>
     <video id="video" controls="controls" autoplay muted>
       <source :src="videoUrl" type="application/x-mpegURL" />
       Your browser does not support HTML5 streaming!
@@ -12,6 +14,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import Hls from 'hls.js';
 
+const animatedBlock = ref(false);
 const videoUrl = ref('');
 const baseUrl = 'http://localhost:18080';
 
@@ -52,12 +55,30 @@ const fetchVideo = async () => {
   }
 };
 
+const animateBlock = () => {
+  animatedBlock.value = true;
+}
+
 onMounted(() => {
   fetchVideo();
 });
 </script>
 
 <style scoped>
+.video {
+  /*transition: transform 0.3s ease-out;*/
+}
+
+.animate {
+  /*transform: translateX(-50px);*/
+  animation: slide-fade 0.3s ease-out forwards;
+}
+
+@keyframes slide-fade {
+  0% { transform: translateX(0) scale(1); }
+  70% { transform: translateX(-120px) scale(1.1); }
+  100% { transform: translateX(-150px) scale(1); }
+}
 
 </style>
 
