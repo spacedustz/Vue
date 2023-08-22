@@ -1,12 +1,23 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
-// 페이지를 여러개 생성 안하고 Dynamic Router를 통해 Status를 받아서 분류
-const routes: Array<RouteRecordRaw> = [
-];
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue')
+    }
+  ]
 })
 
 export default router
