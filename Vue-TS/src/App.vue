@@ -18,6 +18,22 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
   <RouterView />
+
+  <div>
+    <DummyComponent></DummyComponent>
+  </div>
+
+  <div>
+    <RequestBackend></RequestBackend>
+  </div>
+
+  <div>
+    <streaming-hls></streaming-hls>
+  </div>
+
+  <div>
+    <time-graph></time-graph>
+  </div>
 </template>
 
 <style scoped>
