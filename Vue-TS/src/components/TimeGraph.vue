@@ -5,18 +5,37 @@
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted, watchEffect } from 'vue';
-import { Line } from 'vue-chartjs';
-import { fetchFrame } from "@/services/ApiService";
+import {onMounted, ref, watchEffect} from 'vue';
+import { LineChart } from "vue-chart-3";
+import {fetchFrame} from "@/stores/api";
 
-const frameData = ref<Array<any>>([]);
+interface FrameData {
+  count: number;
+  frameId: number;
+  frameTime: number;
+  instanceId: string;
+  systemDate: string;
+  systemTimestamp: number;
+}
+
+const frameData = ref<FrameData[]>([]);
+
+const setData = async () => {
+  try {
+    frameData.value = await fetchFrame();
+    chartData.value.datasets.map(i => i.data = frameData.value.map(data => data))
+
+  } catch (error) {
+    console.error('데이터를 가져오는 중 오류 발생:', error);
+  }
+};
 
 const chartData = ref({
-  labels: frameData.map(data => data.frameId),
+  labels: frameData.value.map(data => data.frameId),
   datasets: [
     {
       label: '프레임 카운트',
-      data: ['count', 'frame_id', 'frame_time', 'instance_id', 'system_date', 'system_timestamp'],
+      data: [],
       borderColor: 'rgba(75, 192, 192, 1)',
       fill: false,
     },
@@ -26,6 +45,14 @@ const chartData = ref({
 const chartOptions = ref({
   responsive: true,
   maintainAspectRatio: false,
+  scales: {
+    x: {
+      type: 'time',
+      time: {
+        unit: 'day'
+      }
+    }
+  }
 });
 
 // 주기적으로 Watch를 걸고 데이터가 변경될 경우 frameData를 업데이트 함
@@ -34,16 +61,22 @@ watchEffect(async () => {
   setInterval(async () => {
     frameData.value = await fetchFrame();
   }, 10000);
+
+  chartData.value = {
+    labels: frameData.value.map(data => data.frameId),
+    datasets: [
+      {
+        label: '프레임 카운트',
+        data: frameData.value.map(data => data),
+        borderColor: 'rgba(75, 192, 192, 1)',
+        fill: false,
+      },
+    ],
+  };
 })
 
 onMounted(async () => {
-  try {
-    frameData.value = await fetchFrame();
-    const frames = response.data;
-
-  } catch (error) {
-    console.error('데이터를 가져오는 중 오류 발생:', error);
-  }
+  await setData();
 });
 </script>
 
