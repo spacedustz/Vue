@@ -16,35 +16,29 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import Hls from 'hls.js';
-import { fetchJson } from "@/services/ApiService";
+import { fetchVideo } from "@/stores/api";
 
-const animatedBlock = ref(false);
-const videoUrl = ref('');
+const animatedBlock = ref<boolean>(false);
+const videoUrl = ref<string>('');
 
-const fetchVideo = async () => {
+const fetchVideo = async (): Promise<void> => {
   try {
-    videoUrl.value = <string>await fetchJson();
+    videoUrl.value = <string>await fetchVideo();
     console.log('Video URL:', videoUrl.value);
 
-    /**
-     * 주의할 점은, TypeScript 환경에서 getElementById와 같은 DOM 관련 메서드는 반환값의 타입이
-     * 항상 HTMLElement | null이므로 타입 어설션 (Type Assertion)을 사용하여 HTMLVideoElement로 변환해주어야 한다는 것입니다.
-     * 이 코드에서는 document.getElementById('video') as HTMLVideoElement와 같은 방식으로 어설션을 사용하여 타입을 지정하였습니다.
-     */
     const video = document.getElementById('video') as HTMLVideoElement;
-    console.log("is Supported ? = " + Hls.isSupported());
 
     if (Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(videoUrl.value);
       hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, function () {
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
         console.log("Manifest_Passed Event 발생");
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = videoUrl.value;
-      video.addEventListener('loadedmetadata', function() {
+      video.addEventListener('loadedmetadata', () => {
         video.play();
       });
     } else {
@@ -52,16 +46,18 @@ const fetchVideo = async () => {
     }
 
     console.log(videoUrl.value);
-  } catch (error) {
-    console.error('비디오 가져오기 실패:', error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('비디오 가져오기 실패:', error.message);
+    } else {
+      console.error('비디오 가져오기 실패:', error);
+    }
   }
 };
 
-onMounted(() => {
-  fetchVideo();
-});
+onMounted(fetchVideo);
 
-const animateBlock = () => {
+const animateBlock = (): void => {
   animatedBlock.value = true;
 }
 </script>
