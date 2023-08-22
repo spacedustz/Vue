@@ -201,16 +201,20 @@ npm install eslint@">=1.6.0 <7.0.0"
 
 <br>
 
-## 필요한 라이브러리 설치
+## Non-Vite 기반 Vue3 TypeScript 라이브러리 설치
 - axios
 - hls.js
-- vue-chartjs
+- vue-chart-3 & chart.js
 - vuex
 - router
 - eslint
+- date-fns & @types/date-fns
+
+
+## Vite 기반 Vue 3 + TypeScript 라이브러리 설치
 
 ```
-npm i axios hls.js vue-chartjs vuex@next vue-router@next --save && npm install eslint-plugin-vue@latest -u && npm i eslint -D
+npm i axios hls.js vue-chart-3 chart.js date-fns @types/date-fns vuex@next vue-router@next --save && npm install eslint-plugin-vue@latest -u && npm i eslint sass -D
 ```
 
 </details>
