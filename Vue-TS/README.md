@@ -1,69 +1,46 @@
 # Vue-TS
-Learn Vue with TypeScript
 
----
+This template should help get you started developing with Vue 3 in Vite.
 
-## BootStrap 설치 & 적용
+## Recommended IDE Setup
 
-[BootStrap Site](https://getbootstrap.com/)
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-```
-npm i bootstrap bootstrap-vue-3
-```
+## Type Support for `.vue` Imports in TS
 
-<br>
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-**main.ts**
-main 파일에 BootStrap 적용
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-```typescript
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+1. Disable the built-in TypeScript Extension
+    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-import BootstrapVue3 from "bootstrap-vue-3";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
+## Customize configuration
 
-createApp(App).use(router).use(BootstrapVue3).mount("#app");
-```
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
----
+## Project Setup
 
-## Useless Component 제거
-
-- Components, Views 디렉토리 하위 파일들 전부 제거
-- Router 디렉토리 하위 index.ts에 Import된 불필요 컴포넌트 제거
-
-```typescript
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-
-const routes: Array<RouteRecordRaw> = [];
-
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
-});
-
-export default router;
+```sh
+npm install
 ```
 
----
+### Compile and Hot-Reload for Development
 
-## Lint 단일 이름 인식
-
-**vue.config.js 파일**
-
-<br>
-
+```sh
+npm run dev
 ```
-// 추가
-lintOnSave:false
-```
-<br>
 
-## Lint 설정
+### Type-Check, Compile and Minify for Production
 
+```sh
+npm run build
 ```
-npm i -D eslint@7.32.0
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
 ```
