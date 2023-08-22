@@ -6,7 +6,7 @@
 
   <!-- RTSP -> HLS Video -->
   <div class="video" align="center">
-    <video id="video" controls="controls" autoplay muted>
+    <video id="video" controls autoplay muted>
       <source :src="videoUrl" type="application/x-mpegURL" />
       Your browser does not support HTML5 streaming!
     </video>
@@ -15,17 +15,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
 import Hls from 'hls.js';
+import { fetchJson } from "@/services/ApiService";
 
 const animatedBlock = ref(false);
 const videoUrl = ref('');
-const baseUrl = 'http://localhost:18080';
 
 const fetchVideo = async () => {
   try {
-    const response = await axios.get<string>(`${baseUrl}/api/video`, { withCredentials: true });
-    videoUrl.value = baseUrl + response.data;
+    videoUrl.value = <string>await fetchJson();
     console.log('Video URL:', videoUrl.value);
 
     /**
@@ -53,19 +51,19 @@ const fetchVideo = async () => {
       console.error('HLS is not Supported in This Browser');
     }
 
-    console.log(response.data);
+    console.log(videoUrl.value);
   } catch (error) {
     console.error('비디오 가져오기 실패:', error);
   }
 };
 
-const animateBlock = () => {
-  animatedBlock.value = true;
-}
-
 onMounted(() => {
   fetchVideo();
 });
+
+const animateBlock = () => {
+  animatedBlock.value = true;
+}
 </script>
 
 <style scoped>
