@@ -196,25 +196,18 @@ npm install eslint@">=1.6.0 <7.0.0"
 
 <br>
 
-## Router 설치
+## 필요한 라이브러리 설치
+- axios
+- hls.js
+- vue-chartjs
+- vuex
+- router
+- eslint
 
 ```
-npm i vue-router@next --save
+npm i axios hls.js vue-chartjs vuex@next vue-router@next --save && npm install eslint-plugin-vue@latest -u && npm i eslint -D
 ```
 
-<br>
-
-## Vuex 설치
-
-```
-npm i vuex@next --save
-```
-
-## Axios 설치
-
-```
-npm i --save axios
-```
 </details>
 
 ---
