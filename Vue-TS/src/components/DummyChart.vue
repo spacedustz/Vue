@@ -8,7 +8,10 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
 import { DoughnutChart } from 'vue-chart-3';
+import { Chart, DoughnutController, ArcElement } from "chart.js";
 import { shuffle } from 'lodash';
+
+Chart.register(DoughnutController, ArcElement);
 
 const data = ref<number[]>([30, 40, 60, 70, 5]);
 const doughnutRef = ref<InstanceType<typeof DoughnutChart> | null>(null);
