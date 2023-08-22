@@ -12,5 +12,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  // HLS 추가
+  optimizeDeps: {
+    include: ['hls.js']
   }
 })
