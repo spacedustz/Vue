@@ -196,6 +196,11 @@ npm install eslint@">=1.6.0 <7.0.0"
 
 <br>
 
+## Vue 3 + TypeScript 프로젝트 생성
+- npm init vue@latest
+
+<br>
+
 ## 필요한 라이브러리 설치
 - axios
 - hls.js
