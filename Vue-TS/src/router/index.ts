@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import RequestBackend from '../components/RequestBackend.vue'
 import StreamingHls from '../components/StreamingHls.vue'
 import TimeGraph from '../components/TimeGraph.vue'
-import {DoughnutChart} from "vue-chart-3";
+import DummyChart from '../components/DummyChart.vue'
 
 const routes = [
   {
@@ -22,8 +22,8 @@ const routes = [
   },
   {
     path: '/test',
-    name: 'Doughnut Chart',
-    component: DoughnutChart
+    name: 'Dummy Chart',
+    component: DummyChart
   },
 ]
 
