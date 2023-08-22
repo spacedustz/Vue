@@ -13,7 +13,7 @@
   </div>
 
   <div>
-    <router-link to="/test">Doughnut Chart</router-link>
+    <router-link to="/test">Dummy Chart</router-link>
   </div>
 
   <router-view></router-view>
